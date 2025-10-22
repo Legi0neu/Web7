@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Subscription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Subscription Form Card -->
+    <div id="subscriptionCard" class="card">
+        <div class="card-image">
+            <!-- Місце для зображення email icon з notification badge -->
+            <img src="assets/philip-oroni-7rMD7zh5SKo-unsplash.jpg" alt="Email notification" class="email-icon">
+        </div>
+        
+        <h1 class="card-title">Subscribe to our Newsletter</h1>
+        <p class="card-subtitle">Join thousands getting emails in their inbox.</p>
+        
+        <form id="subscriptionForm" class="subscription-form">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="emailInput" 
+                    class="email-input" 
+                    placeholder="email@example.com"
+                    autocomplete="email"
+                >
+                <span id="errorMessage" class="error-message">Please enter the valid email</span>
+            </div>
+            
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+    </div>
+
+    <!-- Success Dialog -->
+    <dialog id="successDialog" class="success-dialog">
+        <div class="dialog-content">
+            <div class="success-icon">
+                <!-- Місце для party popper emoji/icon -->
+                <img src="assets/Icon.png" alt="Success" class="party-icon">
+            </div>
+            
+            <h2 class="dialog-title">
+                Your subscription has been placed<br>for your <span id="userEmail">&lt;email&gt;</span>!
+            </h2>
+            
+            <button id="closeDialog" class="thanks-btn">Thanks!</button>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
